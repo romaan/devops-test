@@ -1,0 +1,34 @@
+{
+  "generator-jhipster": {
+    "namespace": "DevOpsDeploy",
+    "databaseType": "mssql",
+    "authenticationType": "jwt",
+    "prodDatabaseType": "mysql",
+    "jhipsterVersion": "6.9.1",
+    "applicationType": "monolith",
+    "baseName": "devopsdeploy",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1596165323966,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-dotnetcore",
+        "version": "1.0.0"
+      }
+    ],
+    "enableTranslation": false,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-dotnetcore",
+        "version": "1.0.0"
+      }
+    ]
+  }
+}

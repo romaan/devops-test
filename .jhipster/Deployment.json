@@ -1,0 +1,39 @@
+{
+  "name": "Deployment",
+  "fields": [
+    {
+      "fieldName": "deployedAt",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "release",
+      "otherEntityRelationshipName": "deployment",
+      "relationshipValidateRules": "required",
+      "relationshipName": "release",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "environment",
+      "otherEntityRelationshipName": "deployment",
+      "relationshipValidateRules": "required",
+      "relationshipName": "environment",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200731035044",
+  "entityTableName": "deployment",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
