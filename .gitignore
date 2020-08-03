@@ -149,3 +149,8 @@ Desktop.ini
 
 test/Devopsdeploy.Test/bin
 test/Devopsdeploy.Test/obj
+src/Devopsdeploy/bin/
+src/Devopsdeploy/obj/
+src/JHipsterNet/bin/
+src/JHipsterNet/obj/
+src/Devopsdeploy/ClientApp/build/

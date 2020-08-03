@@ -1,7 +1,5 @@
 # devopsdeploy
 
-This application was generated using JHipster 6.9.1 and JHipster .Net Core 1.0.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.9.1](https://www.jhipster.tech/documentation-archive/v6.9.1).
-
 ## Development
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
@@ -133,13 +131,23 @@ Then run:
 
     docker run -p 80:80 devopsdeploy
 
-[node.js]: https://nodejs.org/
-[yarn]: https://yarnpkg.org/
-[webpack]: https://webpack.github.io/
-[angular cli]: https://cli.angular.io/
-[browsersync]: http://www.browsersync.io/
-[jest]: https://facebook.github.io/jest/
-[jasmine]: http://jasmine.github.io/2.0/introduction.html
-[protractor]: https://angular.github.io/protractor/
-[leaflet]: http://leafletjs.com/
-[definitelytyped]: http://definitelytyped.org/
+## Helpful commands:
+
+```sh
+npm install -g generator-jhipster-dotnetcore  # Boiler plate generator
+jhipster --blueprint dotnetcore   # Blueprint generator
+
+dotnet tool install --global dotnet-ef   # Entity framework
+dotnet ef migrations add InitialCreate --project ./src/Devopsdeploy/Devopsdeploy.csproj # Create migrations
+docker run --name sqlserver -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password!12' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest # Run database locally for development  
+# Change app.settings.json - DBString
+dotnet ef database update --project ./src/Devopsdeploy/Devopsdeploy.csproj   # Update the database
+
+
+jhipster import-jdl ~/jhipster-jdl.jh    # Import the JDL
+dotnet ef migrations add GeneratedEntity --project ./src/Devopsdeploy/Devopsdeploy.csproj
+dotnet ef database update --project ./src/Devopsdeploy/Devopsdeploy.csproj
+
+
+dotnet ef migrations remove  --project ./src/Devopsdeploy/Devopsdeploy.csproj  # Remove migrations if required
+```
