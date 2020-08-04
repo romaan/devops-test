@@ -1,0 +1,37 @@
+entity Environment {
+	Id String required
+	Name String required
+}
+
+entity Project {
+	Id String required
+	Name String required
+}
+
+entity Release {
+	Id String required
+	Version String required
+  CreatedAt Instant required
+}
+
+entity Deployment {
+	Id String required
+	DeployedAt Instant required
+}
+
+entity Retention {
+	created Instant required
+}
+
+relationship ManyToOne {
+	Release{project required} to Project
+    Deployment{release required} to Release
+    Deployment{environment required} to Environment
+    Retention{environment required} to Environment
+    Retention{release required} to Release
+    Retention{project required} to Project
+    Retention{deployment required} to Deployment
+}
+
+dto * with mapstruct
+paginate * with pagination
